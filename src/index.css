@@ -11,3 +11,157 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pokemon {
+  width: 500px;
+}
+
+.pokemon .pokedexData {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-areas: "image data";
+  /* background-color: antiquewhite; */
+}
+
+.pokemon .pokedexData img {
+  grid-area: image;
+  width: 250px;
+  /* background-color: aquamarine; */
+}
+
+.pokemon .pokedexData .data {
+  grid-area: data;
+  /* background-color: bisque; */
+}
+
+.pokemon .pokedexData .data p {
+  display: block;
+  border-top: 1px solid black;
+}
+
+.type {
+  display: inline-block;
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.type.electric {
+  background-color: #ffee00;
+  border: 3px solid #b8ab00;
+}
+
+.type.normal {
+  background-color: #525252;
+  border: 3px solid #292929;
+}
+
+.type.fighting {
+  background-color: #c44343;
+  border: 3px solid #923434;
+}
+
+.type.flying {
+  background-color: #72d9f3;
+  border: 3px solid #4b92a3;
+}
+
+.type.poison {
+  background-color: #2bff00;
+  border: 3px solid #1dad00;
+}
+
+.type.ground {
+  background-color: #8f4500;
+  border: 3px solid #502700;
+}
+
+.type.rock {
+  background-color: #444444;
+  border: 3px solid #383838;
+}
+
+.type.bug {
+  background-color: #d445aa;
+  border: 3px solid #8b2b6f;
+}
+
+.type.ghost {
+  background-color: #c7c7c7;
+  border: 3px solid #5f5f5f;
+  color: black;
+}
+
+.type.steel {
+  background-color: #5a5a5a;
+  border: 3px solid #3a3a3a;
+}
+
+.type.fire {
+  background-color: #c20101;
+  border: 3px solid #6b0000;
+}
+
+.type.water {
+  background-color: #0300c7;
+  border: 3px solid #020061;
+}
+
+.type.grass {
+  background-color: #0a7c19;
+  border: 3px solid #06460e;
+}
+
+.type.psychic {
+  background-color: #ff00ff;
+  border: 3px solid #830083;
+}
+
+.type.ice {
+  background-color: #4affff;
+  border: 3px solid #2a9b9b;
+}
+
+.type.dragon {
+  background-color: #ffa600;
+  border: 3px solid #ad7101;
+}
+
+.type.dark {
+  background-color: #271e27;
+  border: 3px solid #000000;
+}
+
+.type.fairy {
+  background-color: #8fffc7;
+  border: 3px solid #64ad89;
+  color: black;
+}
+
+.type.unknown {
+  background-color: #300157;
+  border: 3px solid #000000;
+}
+
+.type.shadow {
+  background-color: #e9ceff;
+  border: 3px solid #9c8aaa;
+  color: #000000;
+}
+
+.statbar {
+  display: flexbox;
+  border-radius: 2px;
+}
+
+.statbar.value {
+  background-color: #2bff00;
+}
+
+.pokemon.stat {
+  display: grid;
+  grid-template-columns: 25% 10% 65%;
+  grid-template-areas: 'title value bar';
+  
+}
