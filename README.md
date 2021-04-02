@@ -1,3 +1,5 @@
+# hosted demo
+https://mckson-pokemons.herokuapp.com/
 # pokemons
 The goal of this challenge is to develop a ReactJS app for finding your favourite Pokemon. The app consumes the following API https://pokeapi.co/ 
 # goals
