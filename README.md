@@ -8,8 +8,8 @@ The goal of this challenge is to develop a ReactJS app for finding your favourit
 3.	Clicking on a Pokemon reveals their moves list and evolution information(Which Pokemon will they evolve into AND what Pokemon have they evolved from) (NOT IMPLEMENTED)
 # brief code walk-through
 Application was implemented with help of ReactJS. Application structure: 
-  # public folder
+  ## public folder
     in public folder you could find index.html that defines markup of the application, and other files, logos etc.
     
-  - src folder
+  ## src folder
     
