@@ -28,5 +28,7 @@ component that is responsible for fetching more concrete data about pokemon and 
 component that is displayed directly on the user's screen among some other PokemonCard components, provides user with brief info about pokemon (id, name, type, appearance)
 ### Pokemon
 component that provides user with more detailed info about current pokemon, it recieves info about selected pokemon by handling event that raises from selected PokemonCard when user click on it
+### Other
+there are some other less important elements of the project: Navbar(bar where located buttons for pagination and section to select type of pokemon to display), PokemonAbilities(simple component to display abilities of current pokemon), PokemonTypes(component to indicate type of selected pokemon), PokemonStats(component responsible for displaying statistics with help of horizontal charts)
 
 
