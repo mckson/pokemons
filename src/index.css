@@ -17,30 +17,68 @@ code {
 }
 
 .pokemon {
-  width: 500px;
+  background-color: #dededf;
+  border-radius: 15px;
+  width: 400px;
+  padding: 25px;
+  
+  margin-left: 50px;
+  margin-top: 10px;
 }
 
-.pokemon .pokedexData {
+.pokemon.pokedexData {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
   display: grid;
-  grid-template-columns: 250px 250px;
-  grid-template-areas: "image data";
-  /* background-color: antiquewhite; */
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "image data"; 
+  /* background-color: antiquewhite;*/
 }
 
-.pokemon .pokedexData img {
+.pokemon.pokedexData.image img {
+  width: 200px;
+}
+
+.pokemon.pokedexData.image {
   grid-area: image;
-  width: 250px;
+  
+  border-radius: 0;
   /* background-color: aquamarine; */
 }
 
-.pokemon .pokedexData .data {
+.pokemon.pokedexData.data {
   grid-area: data;
+  display: block;
+  padding: 0;
   /* background-color: bisque; */
 }
 
-.pokemon .pokedexData .data p {
+.item  {
   display: block;
+  padding: 5px;
+  height: 40px;
   border-top: 1px solid black;
+}
+
+.pokemon.baseStats {
+  padding: 0;
+  margin: 0;
+  grid-area: data;
+  width: 100%;
+}
+
+.pokemon.baseStats {
+  padding: 0;
+  grid-area: data;
+  width: 100%;
+}
+
+.stat.item {
+  display: grid;
+  grid-template-columns: 30% 10% 60%;
+  grid-template-areas: 'title value bar';
 }
 
 .type {

@@ -5,7 +5,7 @@ import PokemonAbilities from './PokemonAbilities';
 import PokemonStats from './PokemonStats';
 import PokemonEvolution from './PokemonEvolution';
 
-const Pokemon = ({ pokemon }) => {
+const Pokemon = ({ pokemon, species }) => {
     // constructor(props) {
     //     super(props);
     //     this.state = { 
@@ -46,30 +46,44 @@ const Pokemon = ({ pokemon }) => {
 
 
     
-        if (!pokemon) {
+        if (!pokemon && !species) {
             return <div>No selected pokemon</div>
         }
         else{
             return (
                 <div className='pokemon'>
-                    <div className='pokedexData'>
-                        <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
-                        <div className='data'>
+                    <div className='pokemon pokedexData'>
+                        <div className='pokemon pokedexData image'>
+                            <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
+                        </div>
+                        <div className='pokemon pokedexData data'>
                             <h3>Pokedex Data</h3>
-                            <p>National №: {(parseInt(pokemon.id / 100) > 0) ? pokemon.id : `0${pokemon.id}`}</p>
-                            <p>Types: <PokemonTypes types={pokemon.types} color={pokemon.color} /></p>
-                            {/* <p>Species: {pokemon.species}</p> */}
-                            <p>Height: {pokemon.height / 10} m</p>
-                            <p>Weight: {pokemon.weight / 10} kg</p>
-                            <p>Abilities: <PokemonAbilities abilities={pokemon.abilities} /></p>
+                            <div className='pokemon pokedexData data item'>
+                                Types: <PokemonTypes types={pokemon.types} color={pokemon.color} />
+                            </div>
+                            <div className='pokemon pokedexData data item'>
+                                National №: {(parseInt(pokemon.id / 100) > 0) ? pokemon.id : `0${pokemon.id}`}
+                            </div>
+                            <div className='pokemon pokedexData data item'>
+                                Species: {species.genera[7].genus}
+                            </div>
+                            <div className='pokemon pokedexData data item'>
+                                Height: {pokemon.height / 10} m
+                            </div>
+                            <div className='pokemon pokedexData data item'>
+                                Weight: {pokemon.weight / 10} kg
+                            </div>
+                            <div className='pokemon pokedexData data item'>
+                                Abilities: <PokemonAbilities abilities={pokemon.abilities} />
+                            </div>
                         </div>
                     </div>
-                    <div className='baseStats'>
+                    <div className='pokemon baseStats'>
                         <h4>Base stats</h4>
                         <PokemonStats stats={pokemon.stats} />
                     </div>
                     <PokemonEvolution />
-        </div>
+                </div>
             );
         }
     

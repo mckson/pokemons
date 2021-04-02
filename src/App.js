@@ -7,6 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       selectedPokemon: null,
+      selectedSpecies: null,
       pokemons: [],
       url: 'https://pokeapi.co/api/v2/pokedex/1',
       isLoaded: false,
@@ -22,19 +23,21 @@ class App extends React.Component {
     const response = await fetch(`${url}`);
     const pokedex = await response.json();
 
+    // console.log(Object.keys(pokedex.pokemon_entries).length); 
+
     this.setState({
       isLoaded: true,
       pokemons: pokedex.pokemon_entries,
-      quantity: pokedex.pokemon_entries.lenght 
+      quantity: Object.keys(pokedex.pokemon_entries).length
     });
   }
 
-  onSelected = (e) => {
+  onSelected = (pokemon, species) => {
     this.setState({
-      selectedPokemon: e
+      selectedPokemon: pokemon,
+      selectedSpecies: species
     })
   }
-
 
   render() {
     if (!this.state.isLoaded){
@@ -44,8 +47,8 @@ class App extends React.Component {
       return (
         <div className="App">
           <h1>Pokemons App</h1>
-          <Pokemon pokemon={this.state.selectedPokemon} />
-          <PokemonsList limit={15} pokemons={this.state.pokemons} onSelect={this.onSelected} />
+          <Pokemon pokemon={this.state.selectedPokemon} species={this.state.selectedSpecies} />
+          <PokemonsList limit={15} pokemons={this.state.pokemons} lenght={this.state.quantity} onSelect={this.onSelected} />
         </div>
       );
     }

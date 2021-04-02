@@ -11,7 +11,7 @@ const PokemonStat = ({ title, value, max }) => {
         gridArea: 'bar',
     }
     return (
-        <div className='pokemon stat'>
+        <div className='stat item'>
             <div style={titleStyle}>{title}</div>
             <div style={valueStyle}>{value}</div>
             <Statbar value={value} max={max} style={barStyle} />

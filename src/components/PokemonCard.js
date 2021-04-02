@@ -10,7 +10,7 @@ const PokemonCard = (props) => {
     })
 
     return (
-        <div className='pokemonCard' onClick={() => {props.onSelect(props.pokemon)}}>
+        <div className='pokemonCard' onClick={() => {props.onSelect(props.pokemon, props.species)}}>
             {
                 pokemon.image ?
                 <div className='pokemonCard image'><img src={pokemon.image} alt={pokemon.name} /></div> :

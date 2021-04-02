@@ -67,12 +67,12 @@ class PokemonSpecies extends React.Component {
         )
 
     render() {
-        const { isLoaded, pokemon } = this.state;
+        const { isLoaded, pokemon, pokemonSpecies } = this.state;
         if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
             return (
-                <PokemonCard pokemon={pokemon} onSelect={this.props.onSelect} />
+                <PokemonCard pokemon={pokemon} species={pokemonSpecies} onSelect={this.props.onSelect} />
             )
         }
     }
