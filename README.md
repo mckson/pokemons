@@ -18,7 +18,7 @@ index.js - entry point of the application
 index.css - styles for application components
 App.js - "main" component of the application that is something like carcass where all other components are located 
 src - contains folder components, where all components of application are located:
-### PokemonList component
+### PokemonList
 is like wrapper for next layer component PokemonListDisplayed that provides functionality for pagination over list of pokemons, fetching data and filtering pokemons by type
 ### PokemonListToDisplay
 contains row of PokemonSpecies components that should be displayed in the current moment (pagination), wrapper for PokemonSpecies component
@@ -26,4 +26,7 @@ contains row of PokemonSpecies components that should be displayed in the curren
 component that is responsible for fetching more concrete data about pokemon and passing this data ito PokemonCard child component
 ### PokemonCard 
 component that is displayed directly on the user's screen among some other PokemonCard components, provides user with brief info about pokemon (id, name, type, appearance)
+### Pokemon
+component that provides user with more detailed info about current pokemon, it recieves info about selected pokemon by handling event that raises from selected PokemonCard when user click on it
+
 
