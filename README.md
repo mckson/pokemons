@@ -9,7 +9,13 @@ The goal of this challenge is to develop a ReactJS app for finding your favourit
 # brief code walk-through
 Application was implemented with help of ReactJS. Application structure: 
   ## public folder
-    in public folder you could find index.html that defines markup of the application, and other files, logos etc.
+  in public folder you could find index.html that defines markup of the application, and other files, logos etc.
     
   ## src folder
+  in src there is main logic of application and styles are located
+  
+  index.js - entry point of the application
+  index.css - styles for application components
+  src - contains folder components, where all components of application are located:
+  1. 
     
