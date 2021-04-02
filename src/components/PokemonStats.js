@@ -5,8 +5,8 @@ const PokemonStats = ({ stats }) => {
     return (
         <div className='stats'>
             {
-                stats.map((stat) => (
-                    <PokemonStat title={stat.stat.name} value={stat.base_stat} max={maxValue} />
+                stats.map((stat, index) => (
+                    <PokemonStat title={stat.stat.name} value={stat.base_stat} max={maxValue} key={index} />
                 ))
             }
         </div>

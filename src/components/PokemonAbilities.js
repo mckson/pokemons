@@ -4,8 +4,8 @@ const PokemonAbilities = ({ abilities }) => {
     return (
         <>
             {
-                abilities.map((ability) => (
-                    <PokemonAbility ability={ability} />
+                abilities.map((ability, index) => (
+                    <PokemonAbility ability={ability} key={index} />
                 )) 
             }
         </>

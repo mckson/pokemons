@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.App {
+  height: 100%;
+}
+
 .pokemon {
   width: 500px;
 }
@@ -45,11 +49,12 @@ code {
   border-radius: 3px;
   padding: 3px;
   margin: 3px;
+  vertical-align: middle;
 }
 
 .type.electric {
-  background-color: #ffee00;
-  border: 3px solid #b8ab00;
+  background-color: #F9C742;
+  border: 3px solid #E0B646;
 }
 
 .type.normal {
@@ -163,5 +168,130 @@ code {
   display: grid;
   grid-template-columns: 25% 10% 65%;
   grid-template-areas: 'title value bar';
-  
+}
+
+.pokemonCard {
+  display: block;
+  float: left;
+  width: 280px;
+  height: 300px;
+  padding: 0px;
+  background-color: #bcdffc;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  border: 0.1px solid black;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.pokemonCard:hover {
+  background-color: #70bfff;
+  transition: background-color 0.5s;
+}
+
+.pokemonCard.image {
+  height: 60%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.pokemonCard:hover img:hover {
+  padding: 5px;
+  transition: padding 0.5s;
+}
+
+.pokemonCard.image img{
+  height: 100%;
+}
+
+.pokemonCard.info {
+  height: 40%;
+  margin: 0px;
+  font-size: 20px;
+  border: none;
+  background-color: #609dcf;
+}
+
+.pokemonCard.info.id {
+  height: 30%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pokemonCard.info.name {
+  height: 30%;
+  font-weight: 400;
+}
+
+.pokemonCard.info.types {
+  height: 40%;
+}
+
+.pokemonList {
+  height: 100%;
+  display: block;
+}
+
+.pokemonList.list {
+  height: 90%;
+  display: block;
+}
+
+.navbar.menu.types {
+  display: block;
+  margin: 2.5px;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  padding: 2.5px 10px 2.5px 10px;
+  text-align: center;
+  background-color: rgb(72, 216, 216);
+  cursor: pointer;
+}
+
+.navbar.menu.types:hover {
+  background-color: rgb(53, 170, 170);
+  transition: background-color 1s;
+}
+
+.navbar.menu {
+  justify-content: left;
+  float: left;
+  margin: 5px;
+}
+
+.navbar {
+  display: block;
+  height: 100px;
+}
+
+.flex-item + .flex-item {
+  margin-left: 10px;
+}
+
+.navbar.buttons {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.navbar button {
+  display: block;
+  margin: 2.5px;
+  height: 30px;
+  width: 150px;
+  border-radius: 15px;
+  padding: 2.5px 10px 2.5px 10px;
+  text-align: center;
+  background-color: rgb(36, 73, 194);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: rgb(28, 55, 143);
+  transition: background-color 1s;
 }
