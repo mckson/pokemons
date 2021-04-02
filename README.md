@@ -20,6 +20,10 @@ App.js - "main" component of the application that is something like carcass wher
 src - contains folder components, where all components of application are located:
 ### PokemonList component
 is like wrapper for next layer component PokemonListDisplayed that provides functionality for pagination over list of pokemons, fetching data and filtering pokemons by type
-### PokemonListToDisply
-contains row of PokemonSpecies components that should be displayed in the current moment (pagination) 
+### PokemonListToDisplay
+contains row of PokemonSpecies components that should be displayed in the current moment (pagination), wrapper for PokemonSpecies component
+### PokemonSpecies
+component that is responsible for fetching more concrete data about pokemon and passing this data ito PokemonCard child component
+### PokemonCard 
+component that is displayed directly on the user's screen among some other PokemonCard components, provides user with brief info about pokemon (id, name, type, appearance)
 
