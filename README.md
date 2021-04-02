@@ -8,14 +8,18 @@ The goal of this challenge is to develop a ReactJS app for finding your favourit
 3.	Clicking on a Pokemon reveals their moves list and evolution information(Which Pokemon will they evolve into AND what Pokemon have they evolved from) (NOT IMPLEMENTED)
 # brief code walk-through
 Application was implemented with help of ReactJS. Application structure: 
-  ## public folder
-  in public folder you could find index.html that defines markup of the application, and other files, logos etc.
+## public folder
+in public folder you could find index.html that defines markup of the application, and other files, logos etc.
     
-  ## src folder
-  in src there is main logic of application and styles are located
+## src folder
+in src there is main logic of application and styles are located
   
-  index.js - entry point of the application
-  index.css - styles for application components
-  src - contains folder components, where all components of application are located:
-  1. 
-    
+index.js - entry point of the application
+index.css - styles for application components
+App.js - "main" component of the application that is something like carcass where all other components are located 
+src - contains folder components, where all components of application are located:
+### PokemonList component
+is like wrapper for next layer component PokemonListDisplayed that provides functionality for pagination over list of pokemons, fetching data and filtering pokemons by type
+### PokemonListToDisply
+contains row of PokemonSpecies components that should be displayed in the current moment (pagination) 
+
