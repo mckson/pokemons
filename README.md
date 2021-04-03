@@ -10,7 +10,7 @@ The goal of this challenge is to develop a ReactJS app for finding your favourit
 Application was implemented with help of ReactJS. Application structure: 
 ## main features
 ### data 'caching' and 'portion loading'
-Implemented dynamic list of pokemons data fetching: input data is array of pokemons with type of element { name, url }, so in PokemonList clicks over next and previous buttons allows to navigate over list, which requires more detailed information. In that point 'caching' implemented: when we move forward and info about next portion of pokemons is not fetched it app fetched it, if it already fetched frmo previous moves over list then data taken from array of saved data
+Implemented dynamic list of pokemons data fetching: input data is array of pokemons with type of element { name, url }, so in PokemonList clicks over next and previous buttons allows to navigate over list, which requires more detailed information. In that point 'caching' implemented: when we move forward and info about next portion of pokemons is not fetched app fetched it, if it already fetched frmo previous moves over list then data taken from array of saved data
 ## public folder
 in public folder you could find index.html that defines markup of the application, and other files, logos etc.
     
