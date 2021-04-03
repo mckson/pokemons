@@ -2,7 +2,7 @@ const Statbar = ({ value, max, style }) => {
     const containerStyles = {
         verticalAlign: 'middle',
         height: 10,
-        width: '225px',
+        width: '100%',
         borderRadius: 5,
         gridArea: style.gridArea
     }

@@ -19,7 +19,7 @@ class PokemonsList extends React.Component {
             //flag shows could we render pokemon list or it is no 'calculated' yet
             isLoaded: false,       
             //array to cache filtered pokemons for correct navigation (next, previous)     
-            filteredPokemonsBuffer: []  
+            filteredPokemonsBuffer: []
         }
     }
 

@@ -1,0 +1,78 @@
+.pokemon {
+    background-color: #dededf;
+    border-radius: 15px;
+    width: 60vw;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20vw;
+    margin-right: 20wh;
+  }
+  
+  .pokemon.pokedexData {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image data"; 
+    width: 100%;
+    
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    /* background-color: antiquewhite; */
+  }
+  
+  .pokemon.pokedexData.image {
+    grid-area: image;
+    border-radius: 0;
+    /* background-color: aquamarine; */
+  }
+  
+  .pokemon.pokedexData.image img {
+    width: 25vw;
+    padding: 2.5vw;
+    /* background-color: lightcoral; */
+  }
+  
+  .pokemon.pokedexData.data {
+    grid-area: data;
+    display: block;
+    padding: 0;
+    /* background-color: bisque; */
+  }
+  
+  .pokemon.pokedexData.data.item  {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    color: #929292;
+    border-top: 1px solid rgb(139, 139, 139);
+  }
+
+  .item span.right {
+    padding: 0;
+    color: black;
+    font-weight: 500;
+  }
+
+  .item span.left {
+    padding: 0;
+    color: #828282;
+  }
+
+  .item span.bold {
+    padding: 0;
+    font-weight: 700;
+  }
+  
+  .pokemon.baseStats {
+    padding: 0;
+    margin: 0;
+    grid-area: data;
+    width: 100%;
+  }
+  
+  .stat.item {
+    display: grid;
+    grid-template-columns: 20% 10% 70%;
+    grid-template-areas: 'title value bar';
+  }

@@ -1,5 +1,5 @@
 import PokemonsList from './components/PokemonsList/PokemonsList'
-import Pokemon from './components/Pokemon'
+import Pokemon from './components/Pokemon/Pokemon'
 import React from 'react';
 
 class App extends React.Component {
