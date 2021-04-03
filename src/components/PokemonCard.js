@@ -1,16 +1,17 @@
-import { useState } from 'react'
 import PokemonTypes from './PokemonTypes'
 
-const PokemonCard = (props) => {
-    const [pokemon, setPokemon] = useState({
-        id: props.pokemon.id,
-        name: props.pokemon.name,
-        image: props.pokemon.sprites.other['official-artwork'].front_default,
-        types: props.pokemon.types
-    })
+const PokemonCard = ({ pokemon, onSelect }) => {
+    // const [pokemon, setPokemon] = useState({
+    // const [pokemon] = useState({
+    //     id: props.pokemon.id,
+    //     name: props.pokemon.name,
+    //     image: props.pokemon.sprites.other['official-artwork'].front_default,
+    //     types: props.pokemon.types
+    // })
 
+    // console.log(pokemon);
     return (
-        <div className='pokemonCard' onClick={() => {props.onSelect(props.pokemon, props.species)}}>
+        <div className='pokemonCard' onClick={() => {onSelect(pokemon)}}>
             {
                 pokemon.image ?
                 <div className='pokemonCard image'><img src={pokemon.image} alt={pokemon.name} /></div> :

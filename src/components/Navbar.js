@@ -1,5 +1,4 @@
 import React from 'react'
-import PokemonTypes from './PokemonTypes'
 
 const types = [
     'all',
@@ -33,8 +32,8 @@ const Navbar = ({onNext, onPrevious, onSelectType}) => {
                 <button className='flex-item' onClick={() => onNext()}>Next</button>
             </div>
             <div className='navbar menu flex-item'>
-                {types.map((value) => (
-                    <div className='navbar menu types' onClick={() => {onSelectType(value)}}>{value}</div>
+                {types.map((value, index) => (
+                    <div className='navbar menu types' key={index} onClick={() => {onSelectType(value)}}>{value}</div>
                 ))}
             </div>
         </div>

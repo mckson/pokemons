@@ -4,12 +4,14 @@ import React, { useCallback } from 'react'
 const PokemonsListToDisplay = ( {pokemonSpecies, onSelect} ) => {
     // const [pokemonSpecies, setPokemonSpecies] = useState(pokemonSpecies);
 
-    const renderPokemonSpecies = useCallback((pokemon) => (
-        <PokemonSpecies key={pokemon.pokemon_species.name} name={pokemon.pokemon_species.name} url={pokemon.pokemon_species.url} onSelect={onSelect} />
-    ), []);
+    // const renderPokemonSpecies = useCallback((pokemon) => (
+    const renderPokemonSpecies = (pokemon) => (
+        <PokemonSpecies key={pokemon.id} pokemon={pokemon} onSelect={onSelect} />
+    )
 
+    
         return (
-            pokemonSpecies.map((pokemon) => renderPokemonSpecies(pokemon))
+            pokemonSpecies.map((pokemon) => <PokemonSpecies key={pokemon.id} pokemon={pokemon} onSelect={onSelect} />)
         )
 }
 

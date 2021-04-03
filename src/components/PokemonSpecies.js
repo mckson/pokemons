@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React from 'react'
 import PokemonCard from './PokemonCard';
 
 class PokemonSpecies extends React.Component {
@@ -32,11 +32,10 @@ class PokemonSpecies extends React.Component {
     //     });
     // }
     componentDidMount() {
-        this.fetchPokemonSpecies(`${this.props.url}`)
-
-
-        
-        
+        // this.fetchPokemonSpecies(`${this.props.url}`)        
+        this.setState({
+            isLoaded: true
+        })
     }
 
     fetchPokemonSpecies = async (url) => {
@@ -51,8 +50,6 @@ class PokemonSpecies extends React.Component {
             pokemon: resultPokemon,
             isLoaded: true
         })
-
-        console.log(this.state.pokemon);
     }
 
     fetchPokemon = async (url) => {
@@ -72,7 +69,8 @@ class PokemonSpecies extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <PokemonCard pokemon={pokemon} species={pokemonSpecies} onSelect={this.props.onSelect} />
+                <PokemonCard pokemon={this.props.pokemon} onSelect={this.props.onSelect} />
+                // <PokemonCard pokemon={pokemon} species={pokemonSpecies} onSelect={this.props.onSelect} />
             )
         }
     }

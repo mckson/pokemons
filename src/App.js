@@ -1,4 +1,4 @@
-import PokemonsList from './components/PokemonsList'
+import PokemonsList from './components/PokemonsList/PokemonsList'
 import Pokemon from './components/Pokemon'
 import React from 'react';
 
@@ -43,7 +43,7 @@ class App extends React.Component {
     if (!this.state.isLoaded){
         return <div>Loading...</div>
     }
-    else{
+    else {
       return (
         <div className="App">
           <h1>Pokemons App</h1>

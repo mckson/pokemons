@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import PokemonTypes from './PokemonTypes';
 import PokemonAbilities from './PokemonAbilities';
 import PokemonStats from './PokemonStats';
 import PokemonEvolution from './PokemonEvolution';
 
-const Pokemon = ({ pokemon, species }) => {
+const Pokemon = ({ pokemon }) => {
     // constructor(props) {
     //     super(props);
     //     this.state = { 
@@ -46,7 +46,7 @@ const Pokemon = ({ pokemon, species }) => {
 
 
     
-        if (!pokemon && !species) {
+        if (!pokemon) {
             return <div>No selected pokemon</div>
         }
         else{
@@ -54,18 +54,21 @@ const Pokemon = ({ pokemon, species }) => {
                 <div className='pokemon'>
                     <div className='pokemon pokedexData'>
                         <div className='pokemon pokedexData image'>
-                            <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
+                            <img src={pokemon.image} alt={pokemon.name} />
                         </div>
                         <div className='pokemon pokedexData data'>
-                            <h3>Pokedex Data</h3>
+                            <h3>Pokedex Data</h3> 
+                            <div className='pokemon pokedexData data item'>
+                            Name: {pokemon.name}
+                            </div>
                             <div className='pokemon pokedexData data item'>
                                 Types: <PokemonTypes types={pokemon.types} color={pokemon.color} />
                             </div>
                             <div className='pokemon pokedexData data item'>
-                                National №: {(parseInt(pokemon.id / 100) > 0) ? pokemon.id : `0${pokemon.id}`}
+                                National №: {`#${((pokemon.id/1000).toFixed(3)).toString().slice(2)}`}
                             </div>
                             <div className='pokemon pokedexData data item'>
-                                Species: {species.genera[7].genus}
+                                Species: {pokemon.species_name}
                             </div>
                             <div className='pokemon pokedexData data item'>
                                 Height: {pokemon.height / 10} m
